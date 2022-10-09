@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<div class="container">
+  <a>home</a>
+  <div class="login-container">
+    <form th:action="@{/process_register}" method="post" th:object="${user}">
+
+      <div class="form-pair">
+        <label for="username">username</label>
+        <input type="text" name="username" id="username"  placeholder="username" th:field="*{username}" required
+          minlength="3" maxlength="24">
+      </div>
+      <div class="form-pair">
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" placeholder="password" th:field="*{password}" required
+          minlength="1" maxlength="64">
+      </div>
+      <!-- <div class="form-pair"> -->
+      <input type="submit" value="register">
+      <!-- </div> -->
+    </form>
+  </div>
+</div>
+</body>
+<style>
+    body {
+        /* background-color: tomato; */
+    }
+    .container {
+        display: grid;
+        place-items: center;
+        background-color: hsla(240 50% 50% / .1);
+    }
+    .login-container {
+        position: relative;
+        background-color: #b4b4b4;
+        width: max-content;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        left: 10%;
+        top: 100%;
+    }
+    .form-pair {
+        display: block;
+        margin: .5rem 0;
+    }
+    .form-pair label {
+        background-color: white;
+        padding: .25rem .5rem;
+        border-radius: .125rem;
+
+    }
+    .form-pair input {
+        padding: .25rem;
+        border-radius: .125rem;
+        border: none;
+    }
+    .home-link {
+        background-color:#b4b4b4;
+        padding: .25rem .5rem;
+        position: absolute;
+        border-radius: .125rem;
+        top: 50%;
+        left: 50%;
+        align-self: end;
+    }
+
+</style>
+</html>

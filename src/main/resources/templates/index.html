@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palylist</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>You're going to regret this</h1>
+    </div>
+    <div>
+      <h3><a th:href = "@{/register}">register</a></h3>
+      <h3><a th:href = "@{/login}">login</a></h3>
+    </div>
+  </div>
+</body>
+<style>
+    body {
+        /* background-color: tomato; */
+    }
+    .container {
+        display: grid;
+        place-items: center;
+        background-color: hsla(240 50% 50% / .1);
+    }
+    .login-container {
+        position: relative;
+        background-color: #b4b4b4;
+        width: max-content;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        left: 10%;
+        top: 100%;
+    }
+    .form-pair {
+        display: block;
+        margin: .5rem 0;
+    }
+    .form-pair label {
+        background-color: white;
+        padding: .25rem .5rem;
+        border-radius: .125rem;
+
+    }
+    .form-pair input {
+        padding: .25rem;
+        border-radius: .125rem;
+        border: none;
+    }
+    .home-link {
+        background-color:#b4b4b4;
+        padding: .25rem .5rem;
+        position: absolute;
+        border-radius: .125rem;
+        top: 50%;
+        left: 50%;
+        align-self: end;
+    }
+
+</style>
+</html>
